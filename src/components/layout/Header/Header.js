@@ -16,7 +16,6 @@ import { getUser } from '../../../redux/userRedux';
 import styles from './Header.module.scss';
 
 const Component = ({className, user}) => {
-  console.log(user);
   return (
     <div className={clsx(className, styles.root)}>
       <AppBar position="static">
@@ -25,7 +24,13 @@ const Component = ({className, user}) => {
             <HomeIcon /> 
           </IconButton>
           <nav>
-            <Button href="https://google.com" color="inherit">Login</Button>
+            {user.logged 
+              ? <div>
+                <Button href="#" color="inherit">My posts</Button>
+                <Button href="#" color="inherit">Logout</Button>
+              </div>
+              : <Button href="https://google.com" color="inherit">Login</Button>
+            }            
           </nav>        
         </Toolbar>
       </AppBar>
