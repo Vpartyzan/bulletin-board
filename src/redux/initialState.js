@@ -1,9 +1,14 @@
 export const initialState = {
   posts: {
-    data: {},
+    data: {},    
     loading: {
       active: false,
       error: false,
     },
+  },
+  user: {
+    id: '1',
+    name: 'Neo',
+    logged: true,
   },
 };
