@@ -17,45 +17,44 @@ import Button from '@material-ui/core/Button';
 const Component = ({className, match, user, posts}) => {
   return (
     <div className={clsx(className, styles.root)}>      
-        {posts.filter( post => post.id === match.params.id ).map( post => (
-          <Grid container spacing={1}>
-            <Grid item xs={8}>
-              <Paper elevation={3} className={styles.card}>
-                <CardMedia
-                  component="img"
-                  className={styles.media}
-                  alt="post image"
-                  image={post.image}
-                  title={post.title}
-                />
-              </Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper elevation={3} className={styles.card}>
-                <h3>Author: {post.userName}</h3>
-                <p>Phone: {post.phone}</p>
-              </Paper>
-            </Grid>
-            <Grid item xs={12}>
-              <Paper elevation={3} className={styles.card}>
-                <h2>{post.title}</h2>
-                <p>Price: {post.price}</p>
-                <h3>Description:</h3>
-                <p>{post.description}</p>
-              </Paper>
-            </Grid>
-            {user.logged && user.id === post.userId
-              ? <Button
-                variant="contained"
-                color="primary"
-                className={styles.button}
-                href={`/post/:id/edit`}
-                >Edit post</Button>
-              : ''
-            }             
+      {posts.filter( post => post.id === match.params.id ).map( post => (
+        <Grid container spacing={1}>
+          <Grid item xs={8}>
+            <Paper elevation={3} className={styles.card}>
+              <CardMedia
+                component="img"
+                className={styles.media}
+                alt="post image"
+                image={post.image}
+                title={post.title}
+              />
+            </Paper>
           </Grid>
-        ))}
-             
+          <Grid item xs={4}>
+            <Paper elevation={3} className={styles.card}>
+              <h3>Author: {post.userName}</h3>
+              <p>Phone: {post.phone}</p>
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper elevation={3} className={styles.card}>
+              <h2>{post.title}</h2>
+              <p>Price: {post.price}</p>
+              <h3>Description:</h3>
+              <p>{post.description}</p>
+            </Paper>
+          </Grid>
+          {user.logged && user.id === post.userId
+            ? <Button
+              variant="contained"
+              color="primary"
+              className={styles.button}
+              href={`/post/:id/edit`}
+              >Edit post</Button>
+            : ''
+          }             
+        </Grid>
+      ))}             
     </div>
   );  
 };
