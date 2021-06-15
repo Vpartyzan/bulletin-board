@@ -28,7 +28,7 @@ const Component = ({className, user}) => {
           <nav>
             {user.logged 
               ? <div>
-                  <Button href="#" color="inherit">My posts</Button>
+                  <Button href={`/${user.name}/posts`} color="inherit">My posts</Button>
                   <Button href="#" color="inherit">Logout</Button>
                 </div>
               : <Button href="https://google.com" color="inherit">Login</Button>

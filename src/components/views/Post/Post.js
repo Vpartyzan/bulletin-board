@@ -49,7 +49,7 @@ const Component = ({className, match, user, posts}) => {
               variant="contained"
               color="primary"
               className={styles.button}
-              href={`/post/:id/edit`}
+              href={`/post/${post.id}/edit`}
               >Edit post</Button>
             : ''
           }             
