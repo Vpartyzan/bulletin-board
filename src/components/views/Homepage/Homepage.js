@@ -24,7 +24,7 @@ const Component = ({className, user, posts}) => {
           variant="contained"
           color="primary"
           className={styles.button}
-          href={`/posts/add`}
+          href={`/post/add`}
           >New post</Button>
         : ''
       }
@@ -39,7 +39,7 @@ const Component = ({className, user, posts}) => {
           />
           <CardHeader title={post.title} subheader={`${post.updateDate ? `updated: ${post.updateDate}` : `created: ${post.createDate}`}`} />
           <CardActions className={styles.link}>
-            <Button size="small" color="secondary" variant="contained" href={`/posts/${post.id}`}>
+            <Button size="small" color="secondary" variant="contained" href={`/post/${post.id}`}>
               Show details
             </Button>
           </CardActions>

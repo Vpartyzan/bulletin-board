@@ -2,8 +2,9 @@ export const initialState = {
   posts: {
     data: [
       {
-        id: 1,
-        userId: 1,
+        id: "1",
+        userId: "1",
+        userName: "Neo",
         title: "House for sale",
         description: "I will sell a one-story building in a quiet and peaceful neighborhood, near the center",
         createDate: "02.04.2021",
@@ -13,8 +14,9 @@ export const initialState = {
         image: "https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_960_720.jpg",
       },
       {
-        id: 2,
-        userId: 2,
+        id: "2",
+        userId: "2",
+        userName: "Elliot Alderson",
         title: "Apartment for rent",
         description: "Apartment on the third floor, two bedrooms",
         createDate: "28.05.2021",
@@ -24,8 +26,9 @@ export const initialState = {
         image: "https://cdn.pixabay.com/photo/2019/12/16/15/43/room-4699578_960_720.jpg",
       },
       {
-        id: 3,
-        userId: 1,
+        id: "3",
+        userId: "1",
+        userName: "Neo",
         title: "Car for Sale",
         description: "Good condition, recently replaced filters, timing gear and oils. New pads and clutch. I'm selling because I bought another one.",
         createDate: "25.01.2021",
@@ -35,8 +38,9 @@ export const initialState = {
         image: "https://cdn.pixabay.com/photo/2019/07/07/14/03/fiat-4322521_960_720.jpg",
       },
       {
-        id: 4,
-        userId: 3,
+        id: "4",
+        userId: "3",
+        userName: "Alex Erickson",
         title: "Laptop for sale",
         description: "Fully functional. Complete. New wine system 10.",
         createDate: "12.06.2021",
@@ -46,8 +50,9 @@ export const initialState = {
         image: "https://cdn.pixabay.com/photo/2014/05/02/21/50/laptop-336378_960_720.jpg",
       },
       {
-        id: 5,
-        userId: 4,
+        id: "5",
+        userId: "4",
+        userName: "Thomas Anderson",
         title: "Laptop for sale",
         description: "The computer is visually in very good condition.",
         createDate: "23.05.2021",
@@ -63,7 +68,7 @@ export const initialState = {
     },
   },
   user: {
-    id: 1,
+    id: "1",
     name: 'Neo',
     logged: true,
   },
