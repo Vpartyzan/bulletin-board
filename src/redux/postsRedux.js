@@ -20,6 +20,20 @@ export const addPost = payload => ({ payload, type: ADD_POST });
 export const updatePost = payload => ({ payload, type: UPDATE_POST });
 
 /* thunk creators */
+export const fetchPublished = () => {
+  return (dispatch, getState) => {
+    dispatch(fetchStarted());
+
+    Axios
+      .get('http://localhost:8000/api/posts')
+      .then(res => {
+        dispatch(fetchSuccess(res.data));
+      })
+      .catch(err => {
+        dispatch(fetchError(err.message || true));
+      });
+  };
+};
 
 /* reducer */
 export const reducer = (statePart = [], action = {}) => {
